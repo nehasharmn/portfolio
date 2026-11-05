@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Neha Sharma: product, AI, and data. Interested in stablecoins and cross-border payments.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Neha Sharma</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky left rail (name, nav, contact) + scrolling right column of work; stacks to one column on phones */
+:root {
+  --bg: #F3F4F8;
+  --surface: #FFFFFF;
+  --ink: #141831;
+  --muted: #5B6078;
+  --line: #DADDE8;
+  --accent: #C9820A;
+  --accent-soft: #FBEFD6;
+  --display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1122; --surface: #161A30; --ink: #E8EAF4; --muted: #9AA0BA;
+    --line: #2A2F4A; --accent: #F2B33D; --accent-soft: #2E2716; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1122; --surface: #161A30; --ink: #E8EAF4; --muted: #9AA0BA;
+  --line: #2A2F4A; --accent: #F2B33D; --accent-soft: #2E2716; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 16px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.wrap {
+  max-width: 1120px; margin: 0 auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+  padding-block: 56px 80px;
+  display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 72px;
+}
+
+/* Rail */
+.rail { position: sticky; top: calc(56px + env(safe-area-inset-top, 0px)); align-self: start; display: grid; gap: 28px; }
+.name {
+  font-family: var(--display); font-weight: 800; font-size: 3.2rem; line-height: .95;
+  letter-spacing: -.03em; margin: 0; text-wrap: balance;
+}
+.name span { color: var(--accent); }
+.role { margin: 0; color: var(--muted); font-size: 1rem; max-width: 26ch; }
+.role strong { color: var(--ink); font-weight: 600; }
+nav ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+nav a {
+  display: flex; align-items: center; gap: 12px; text-decoration: none;
+  font-family: var(--mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--muted); padding: 4px 0;
+}
+nav a::before { content: ""; width: 20px; height: 1px; background: currentColor; transition: width .2s; }
+nav a:hover, nav a.on { color: var(--ink); }
+nav a:hover::before, nav a.on::before { width: 40px; background: var(--accent); }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.links a, .copy {
+  font-family: var(--mono); font-size: .78rem; text-decoration: none;
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px;
+  background: var(--surface); color: var(--ink); cursor: pointer;
+}
+.links a:hover, .copy:hover { border-color: var(--accent); }
+
+/* Main */
+main { display: grid; gap: 88px; min-width: 0; }
+section { display: grid; gap: 28px; scroll-margin-top: 32px; }
+.eyebrow {
+  font-family: var(--mono); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); display: flex; align-items: center; gap: 12px; margin: 0;
+}
+.eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+.lede {
+  font-family: var(--display); font-weight: 400; font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.2; letter-spacing: -.015em; margin: 0; max-width: 24ch; text-wrap: balance;
+}
+.lede em { font-style: normal; background: linear-gradient(transparent 62%, var(--accent-soft) 62%); }
+.about p { margin: 0; max-width: 62ch; color: var(--muted); }
+.about { display: grid; gap: 20px; }
+
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.stat { background: var(--surface); padding: 18px; display: grid; gap: 2px; }
+.stat b { font-family: var(--display); font-size: 1.9rem; font-weight: 600; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stat span { font-size: .82rem; color: var(--muted); line-height: 1.35; }
+
+/* Experience */
+.jobs { display: grid; gap: 0; }
+.job { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 24px; padding: 26px 0; border-top: 1px solid var(--line); }
+.job:last-child { border-bottom: 1px solid var(--line); }
+.when { font-family: var(--mono); font-size: .78rem; color: var(--muted); padding-top: 4px; font-variant-numeric: tabular-nums; }
+.when .now { display: inline-block; color: var(--accent); font-weight: 500; }
+.job h3 { font-family: var(--display); font-weight: 600; font-size: 1.3rem; margin: 0; letter-spacing: -.01em; }
+.job .org { color: var(--muted); font-size: .92rem; margin: 2px 0 12px; }
+.job ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.job li { max-width: 64ch; }
+.job li::marker { color: var(--accent); }
+
+/* Projects */
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.proj { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: grid; gap: 14px; align-content: start; }
+.proj h3 { font-family: var(--display); font-weight: 600; font-size: 1.35rem; margin: 0; letter-spacing: -.01em; }
+.proj .kind { font-family: var(--mono); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0; }
+.proj p { margin: 0; color: var(--muted); }
+.metric { display: flex; align-items: baseline; gap: 10px; font-family: var(--mono); font-size: .85rem; color: var(--muted); }
+.metric b { font-family: var(--display); font-size: 1.6rem; color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.metric .arrow { color: var(--accent); }
+.bleu { display: grid; gap: 6px; }
+.bar { height: 8px; border-radius: 4px; background: var(--line); position: relative; overflow: hidden; }
+.bar i { position: absolute; inset: 0 auto 0 0; border-radius: 4px; }
+.bar .base { background: var(--muted); opacity: .5; }
+.bar .attn { background: var(--accent); }
+.bar-row { display: grid; grid-template-columns: 92px minmax(0, 1fr) 36px; align-items: center; gap: 10px; font-family: var(--mono); font-size: .74rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-family: var(--mono); font-size: .72rem; padding: 3px 8px; border-radius: 6px; background: var(--accent-soft); color: var(--ink); }
+
+/* Skills */
+.skills { display: grid; gap: 0; }
+.skill { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding: 16px 0; border-top: 1px solid var(--line); }
+.skill:last-child { border-bottom: 1px solid var(--line); }
+.skill h3 { margin: 0; font-size: .95rem; font-weight: 600; }
+
+/* Education + contact */
+.edu { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; align-items: baseline; }
+.edu h3 { font-family: var(--display); font-weight: 600; font-size: 1.3rem; margin: 0; }
+.edu p { margin: 0; color: var(--muted); }
+.contact { background: var(--ink); color: var(--bg); border-radius: 18px; padding: 36px; display: grid; gap: 18px; }
+.contact h2 { font-family: var(--display); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0; letter-spacing: -.02em; text-wrap: balance; }
+.contact p { margin: 0; opacity: .8; max-width: 52ch; }
+.contact .links a, .contact .copy { background: transparent; color: var(--bg); border-color: color-mix(in srgb, var(--bg) 35%, transparent); }
+.contact .links a:hover, .contact .copy:hover { border-color: var(--accent); }
+.email { font-family: var(--mono); font-size: 1rem; user-select: all; }
+footer { font-family: var(--mono); font-size: .74rem; color: var(--muted); }
+
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 48px; padding-block: 36px 64px; }
+  .rail { position: static; }
+  nav { display: none; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .projects { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .name { font-size: 2.6rem; }
+  .job, .skill { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .contact { padding: 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <aside class="rail">
+    <h1 class="name">Neha<br>Sharma<span>.</span></h1>
+    <p class="role"><strong>Computer science student at UNC Chapel Hill.</strong> Product, AI, and data. Interested in stablecoins and cross-border payments.</p>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="links">
+      <a href="https://linkedin.com/in/sharmn" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/nehasharmn" target="_blank" rel="noopener">GitHub</a>
+      <a href="#contact">Email</a>
+    </div>
+  </aside>
+
+  <main>
+    <section id="about" class="about">
+      <p class="eyebrow">About</p>
+      <p class="lede">I'm a student and product builder who likes to <em>build the thing</em> before pitching it.</p>
+      <p>I'm currently studying computer science, with a minor in data science, at UNC Chapel Hill. I've worked across consulting, enterprise data, defense tech, and an AI edtech startup in London. Along the way I've shipped AI agents, data pipelines, a translation model, and a marketplace app with real payments running through it.</p>
+      <p>Right now I'm most interested in stablecoins and cross-border payments: how money moves between countries, and how to make that faster, cheaper, and easier to trust.</p>
+      <div class="stats" aria-label="Highlights">
+        <div class="stat"><b>+12%</b><span>student retention from AI learning tools</span></div>
+        <div class="stat"><b>+25%</b><span>reporting adoption after BI migration</span></div>
+        <div class="stat"><b>30%</b><span>month-over-month growth at Campus Closet</span></div>
+        <div class="stat"><b>40+</b><span>schools in user research</span></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <p class="eyebrow">Experience</p>
+      <div class="jobs">
+        <article class="job">
+          <div class="when">Jun – Aug 2025</div>
+          <div>
+            <h3>Product Management Intern</h3>
+            <p class="org">Ernst &amp; Young (EY) · New York, NY</p>
+            <ul>
+              <li>Built AI agents in ServiceNow AI Agent Studio for a procurement portal, automating supplier FAQs, PO status, and approvals with guardrails, multi-turn flows, and knowledge base lookups.</li>
+              <li>Connected agents to ServiceNow tables and APIs to trigger tasks and route intents, cutting manual tickets and improving SLA adherence.</li>
+              <li>Evaluated NLP classifiers for supplier risk scoring and demand forecasting with product and engineering, and supported A/B experiments.</li>
+              <li>Shaped a roadmap with cross-functional stakeholders and ran three sprints from a prioritized backlog.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">Nov 2024 – Jan 2025</div>
+          <div>
+            <h3>Defense Technology Fellow</h3>
+            <p class="org">Palantir Technologies · Remote</p>
+            <ul>
+              <li>Explored agentic workflows and distributed systems in defense scenarios, prototyping autonomous planning concepts with AIP case simulations.</li>
+              <li>Presented findings on operational impact and deployment tradeoffs to mentors and peers.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">May – Aug 2024</div>
+          <div>
+            <h3>Data Engineering Intern</h3>
+            <p class="org">Lenovo · Raleigh, NC</p>
+            <ul>
+              <li>Migrated analytics products from Tableau to PowerBI, raising reporting adoption by 25% across global e-commerce teams.</li>
+              <li>Built and maintained 10+ real-time ETL pipelines on AWS S3 and Glue, reducing downtime by 30%.</li>
+              <li>Defined data and product requirements for an SAP CRM integration to improve sales pipeline visibility.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job">
+          <div class="when">Jan – May 2024</div>
+          <div>
+            <h3>AI Product and Strategy Intern</h3>
+            <p class="org">StudyHall.AI · London, UK</p>
+            <ul>
+              <li>Launched AI learning tools, including diagnostic assessments and the AI Deep Reader, improving student retention by 12%.</li>
+              <li>Ran user research across 40+ schools and turned it into prioritized requirements for adaptive personalization.</li>
+              <li>Built the go-to-market strategy: market sizing, competitor benchmarking, and adoption playbooks.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <p class="eyebrow">Projects</p>
+      <div class="projects">
+        <article class="proj">
+          <p class="kind">Founder and product lead · iOS app</p>
+          <h3>Campus Closet</h3>
+          <p>A clothing rental marketplace for students. I set the vision and roadmap, won a UNC venture fund grant, and built the app end to end in React Native and Firebase with Stripe payments.</p>
+          <div class="metric"><b>100+</b> active users first semester</div>
+          <div class="metric"><b>100+</b> payments processed</div>
+          <div class="tags"><span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">Stripe</span><span class="tag">Agile</span></div>
+        </article>
+        <article class="proj">
+          <p class="kind">AI · NLP</p>
+          <h3>Neural Machine Translation</h3>
+          <p>English to German on Multi30k. A GRU encoder-decoder baseline, then additive attention, with the full training stack built from scratch: 8k-merge BPE, masked loss, greedy decoding, and attention heatmaps.</p>
+          <div class="bleu" aria-label="Test BLEU: 14.5 baseline, 24.8 with attention">
+            <div class="bar-row"><span>Seq2seq</span><div class="bar"><i class="base" style="width:46%"></i></div><span>14.5</span></div>
+            <div class="bar-row"><span>+ Attention</span><div class="bar"><i class="attn" style="width:78%"></i></div><span>24.8</span></div>
+          </div>
+          <div class="metric">test BLEU <span class="arrow">↑</span> <b>+10.3</b></div>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">HuggingFace</span><span class="tag">NLTK</span><span class="tag">subword-nmt</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <p class="eyebrow">Skills</p>
+      <div class="skills">
+        <div class="skill"><h3>Product</h3><div>Product strategy, roadmapping, user research, go-to-market, Agile/Scrum, Figma</div></div>
+        <div class="skill"><h3>AI / ML</h3><div>AI agent development, NLP, PyTorch, TensorFlow, HuggingFace, spaCy, NLTK, ServiceNow AI Agent Studio</div></div>
+        <div class="skill"><h3>Languages</h3><div>Python, JavaScript/TypeScript, Java, SQL (MySQL, Redshift), HTML/CSS</div></div>
+        <div class="skill"><h3>Platforms</h3><div>React, React Native, Firebase, AWS, Docker, Talend, PowerBI, Tableau, Git</div></div>
+      </div>
+    </section>
+
+    <section id="education">
+      <p class="eyebrow">Education</p>
+      <div class="edu">
+        <h3>University of North Carolina at Chapel Hill</h3>
+        <p>B.S. Computer Science (in progress) · Minor in Data Science</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h2>Want to talk stablecoins, payments, or AI?</h2>
+        <p>I'm always happy to connect.</p>
+        <div class="email" id="email">sharmn@unc.edu</div>
+        <div class="links">
+          <button class="copy" id="copyBtn" type="button">Copy email</button>
+          <a href="https://linkedin.com/in/sharmn" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/nehasharmn" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <footer>© 2026 Neha Sharma</footer>
+    </section>
+  </main>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('copyBtn');
+  var email = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy email'; }, 1600); };
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press Ctrl+C';
+    };
+    try {
+      navigator.clipboard.writeText(email.textContent.trim()).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+
+  var links = document.querySelectorAll('nav a');
+  var ids = Array.prototype.map.call(links, function (a) { return a.getAttribute('href').slice(1); });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    ids.forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
